@@ -3,7 +3,7 @@
 
 void llenar_arreglo(int *, int);
 void imprimir_arreglo(int *,int);
-
+void espar_arreglo(int *,int);
 
 
 
@@ -15,6 +15,8 @@ int main()
     scanf("%d", &longitud);
     llenar_arreglo(parreglo,longitud);
     imprimir_arreglo(parreglo,longitud);
+    espar_arreglo(parreglo, longitud);
+
 return 0;
 }
 
@@ -41,6 +43,14 @@ void imprimir_arreglo(int *p, int l){
     }
 printf("El mayor es %d y direccion de auxiliar es %p, y direccion %p \n" , aux,&aux,direccion);
 
+}
+void espar_arreglo(int *parcito){
+    if(*parcito %2 == 0){
+
+        printf("Es par \n ");
+    }else{
+    printf ("No es par \n");
+    }
 }
 
 
