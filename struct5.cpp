@@ -43,8 +43,29 @@ int main(){
     scanf("%f",&student[i].p_nota[i].nota2);
     printf("Ingrese tercer nota\n");
     scanf("%f",&student[i].p_nota[i].nota3);
-    };
 
+
+     student[i].p_nota[i].prome=(student[i].p_nota[i].nota1+student[i].p_nota[i].nota2+student[i].p_nota[i].nota3)/3; }
     system("cls");
+
+    prome_mayor=student[0].p_nota[0].prome;
+    prome_menor=student[0].p_nota[0].prome;
+
+    for(int i=0;i<cantd;i++)
+    { if(prome_mayor<=student[i].p_nota[i].prome);
+        { prome_mayor=student[i].p_nota[i].prome;
+            mayor=i; }
+    }
+    for(int i=0;i<cantd;i++)
+    { if(prome_menor>=student[i].p_nota[i].prome)
+        { prome_menor=student[i].p_nota[i].prome;
+            menor=i; }
+    }
+
+
+
+
+
+
 return 0;
 }
