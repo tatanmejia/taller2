@@ -31,7 +31,7 @@ int main(){
 
     for(int i=0;i<cantd;i++){
 
-    printf("Ingrese Nombre %d:", i+1);
+    printf("Ingrese Nombre %d:\n", i+1);
     scanf("%s",student[i].nombre );
     printf("Ingrese su sexo masculino o femenino: \n");
     scanf("%s", student[i].sexo);
@@ -62,8 +62,27 @@ int main(){
             menor=i; }
     }
 
+    printf("-------------Mejor promedio de estudiante---------------\n");
+    printf("\nNombre de estudiante %s", student[mayor].nombre);
+    printf("\nSexo: %s",student[mayor].sexo);
+    printf("\nEdad: %d",student[mayor].edad);
+    printf("\nNota 1: %1.1f",student[mayor].p_nota[mayor].nota1);
+    printf("\nNota 2: %1.1f",student[mayor].p_nota[mayor].nota2);
+    printf("\nNota 3: %1.1f",student[mayor].p_nota[mayor].nota3);
+    printf("\nPromedio: %1.1f", prome_mayor);
+    printf("\n\n");
 
 
+
+    printf("----------------Menor promedio de estudiante---------------\n");
+    printf("\nNombre de estudiante %s", student[menor].nombre);
+    printf("\nSexo: %s",student[menor].sexo);
+    printf("\nEdad: %d",student[menor].edad);
+    printf("\nNota 1: %1.1f",student[menor].p_nota[menor].nota1);
+    printf("\nNota 2: %1.1f",student[menor].p_nota[menor].nota2);
+    printf("\nNota 3: %1.1f",student[menor].p_nota[menor].nota3);
+    printf("\nPromedio: %1.1f", prome_menor);
+    printf("\n\n");
 
 
 
