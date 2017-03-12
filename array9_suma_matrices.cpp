@@ -1,33 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void pedirdatos();
+void suma_matriz(int **,int **,int,int);
 
-int main(void){
-	int i;
-	int *matrix_a;
-	int *matrix_b;
-	int result;
+int **puntero_mat1, **puntero_mat2,nfilas,ncolumnas;
+
+int main(){
+
+    pedirdatos();
+    suma_matriz();
 
 
-	/*
-	* size = numero máximo de int que admite block
-	*/
-	for(i = 0 ; i < size; i++){
-		i%2 ? (*matrix_a++=1)  : (*matrix_b++=2) ;
-	}
-	matrix_a =(int*)block;
-	matrix_b =(int*)block+size/2;
 
-	/*
-	*size/2 es el número de elementos que contiene cada
-	*matriz. El resultado tiene que ser 3 y coincidir con
-	*size/2 en el número de elementos.
-	*/
-	for(i = 0 ; i < size/2; i++){
-		 result = *matrix_a+++ *matrix_b++;
-		  printf("%d-",result);
-	}
-
-	 free(block);
-	return 0;
 }
+
+void pedirdatos(){
+    printf("Digite el numero de filas: ");
+    scanf("%d",&nfilas);
+    printf("Digite el numero de columnas: ");
+    scanf("%d",&ncolumnas);
+
+    puntero_mat1=new int*[nfilas];
+    for(int i;i<nfilas;i++){
+
+        puntero_mat1[i]=new int[ncolumnas];
+    }
+    printf("Digite los elementos de la primera matriz: \n");
+    for(int i=0;i<nfilas;i++){
+        for(int j=0;j<ncolumnas;j++){
+            printf("Digite un numero %d",i+1);
+            scanf("%d",*(*(puntero_mat1+i)+j));
+
+        }
+    }
+     puntero_mat2=new int*[nfilas];
+    for(int i;i<nfilas;i++){
+
+        puntero_mat2[i]=new int[ncolumnas];
+    }
+    printf("Digite los elementos de la segunda matriz: \n");
+    for(int i=0;i<nfilas;i++){
+        for(int j=0;j<ncolumnas;j++){
+            printf("Digite un numero %d",i+1);
+            scanf("%d",*(*(puntero_mat2+i)+j));
+
+        }
+    }
+}
+
+
+void suma_matriz(int **puntero_mat1, int **puntero_mat2, int nfilas, int ncolumnas)
