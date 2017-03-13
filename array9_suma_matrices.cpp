@@ -77,15 +77,7 @@ void suma_matriz(){
             }
         }
     }
-
-
-   /* for(int i=0;i<nfilas;i++){
-        for(int j=0;i<ncolumnas;i++){
-            (*(*(puntero_mat1+i)+j)+= *(*(puntero_mat2+i)+j));
-        }
-    }
-}*/}
-
+}
 void mostrar_matriz(){
     printf("\nLa suma de las 2 matrices es: \n");
     for(int i=0;i<nfilas;i++){
