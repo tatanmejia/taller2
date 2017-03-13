@@ -71,9 +71,9 @@ void suma_matriz(){
 
     for(int a=0; a<nfilas; a++){
         for(int b=0; b<ncolumnas; b++){
-            (*(*(matriz_suma+a)+b))=0;
+            (*(*(matriz_suma+b)+a))=0;
             for(int c=0;c<ncolumnas;c++){
-               (*(*(matriz_suma+a)+b))=((*(*(puntero_mat1+a)+c)) + (*(*(puntero_mat2+c)+b)));
+               (*(*(matriz_suma+b)+a))=((*(*(puntero_mat1+a)+b)) + (*(*(puntero_mat2+a)+b)));
             }
         }
     }
@@ -91,9 +91,9 @@ void mostrar_matriz(){
     for(int i=0;i<nfilas;i++){
 
         for(int j=0;j<ncolumnas;j++){
-            printf("%d",*(*(matriz_suma+i)+j));
+            printf(" %d ",*(*(matriz_suma+i)+j));
         }
-        printf("\n");
+        printf("\n\n");
     }
 
 
