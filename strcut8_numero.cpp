@@ -6,31 +6,38 @@ void palabra(char *);
 void vocal(int *,char *);
 
 int main(){
-    char pal[30], *p=pal;
+    char palab[30], *p=palab;
     int num, *pp=&num;
 
     palabra(p);
-    num=strlen(pal);
-    vocal(pp,p); }
+    num=strlen(palab);
+    vocal(pp,p);
 
-void palabra (char *pv){
+return 0;
+}
+
+void palabra (char *pvoc){
     printf("Ingrese una palabra: ");
-    scanf("%s",pv);
+    scanf("%s",pvoc);
     printf("\n\n");
 }
 
-void vocal(int *pn, char *pv){
+void vocal(int *pn, char *pvoc){
     int vocal_a=0, vocal_e=0, vocal_i=0, vocal_o=0, vocal_u=0;
     for(int i=0;i<*pn;i++){
-        if (*(pv+i)=='a'){
-            vocal_a++; }
-            if (*(pv+i)=='e'){
-                vocal_e++; }
-                if (*(pv+i)=='i'){
-                    vocal_i++; }
-                    if (*(pv+i)=='o'){
-                        vocal_o++; }
-                        if (*(pv+i)=='u'){
+        if (*(pvoc+i)=='a'){
+            vocal_a++;
+                    }
+            if (*(pvoc+i)=='e'){
+                vocal_e++;
+                        }
+                if (*(pvoc+i)=='i'){
+                    vocal_i++;
+                            }
+                    if (*(pvoc+i)=='o'){
+                        vocal_o++;
+                            }
+                        if (*(pvoc+i)=='u'){
                             vocal_u++;}
                             }
     printf("La vocal A se repite %i veces. \n", vocal_a);
@@ -39,3 +46,4 @@ void vocal(int *pn, char *pv){
     printf("La vocal O se repite %i veces. \n", vocal_o);
     printf("La vocal U se repite %i veces. \n", vocal_u);
 }
+
