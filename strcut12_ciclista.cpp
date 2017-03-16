@@ -17,11 +17,11 @@ int main(){
     printf("Digite el numero de etapas: ");
     scanf("%d",&num_etapa);
     for(int i=0;i<num_etapa;i++){
-        printf("Horas:" ,i+1);
+        printf("Horas :" ,i+1);
         scanf("%d",&eta[i].horas);
-        printf("Minutos:", i+1);
+        printf("Minutos:");
         scanf("%d",&eta[i].minutos);
-        printf("Segundos:", i+1);
+        printf("Segundos:");
         scanf("%d",&eta[i].segundos);
 
         htotal=htotal+eta[i].horas;
@@ -35,11 +35,12 @@ int main(){
                 segtotal -=60;
                 mintotal++;
             }
+        printf("\n\n");
         }
-
-    printf("\nEl tiempo en horas es: %d", htotal);
-    printf("El tiempo en minutos es: %d",mintotal);
-    printf("El tiempo en segundo es: %d",segtotal);
+    printf("\nTiempo total utilizado en etapas:\n");
+    printf("\Horas utilizadas: %d\n", htotal);
+    printf("Minutos utilizadas: %d\n",mintotal);
+    printf("Segundos utilizados: %d\n",segtotal);
 
 
 
